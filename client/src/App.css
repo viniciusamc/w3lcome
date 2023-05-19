@@ -1,0 +1,121 @@
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 300px;
+  font-size: 20px;
+}
+
+form input::placeholder {
+  font-size: 16px;
+  text-align: center;
+}
+
+form button {
+  background-color: rgb(43, 168, 26);
+}
+
+.pending-task, .completed-task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+
+.pending-task li, .completed-task li {
+  background-color: #ffffff2d;
+  padding: 10px 30px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 8px;
+  width: 70%!important;
+  min-width: 320px;
+  text-decoration: none;
+  transition: 0.3s ease-out;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.pending-task li::before, .completed-task li::before{
+  content: '\1F4CC';
+}
+
+.pending-task li:nth-child(odd){
+  background-color: gray;
+}
+
+.pending-task li:hover, .completed-task li:hover {
+  transform: scale(1.05);
+}
+
+.pending-task li div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pending-task li button, .completed-task button,  form button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;   
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(43, 168, 26);
+  transition: 0.3s ease-out;  
+}
+
+.pending-task li button:nth-child(2), .completed-task button{
+  background-color: rgb(151, 1, 1);
+}
+
+.pending-task li button:hover, form button:hover {
+  background-color: black;
+}
+
+
+.completed-task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+
+.completed-task li {
+  display: flex;
+  gap: 8px;
+  background-color: rgb(28, 48, 28);
+}
+
+.completed-task li:nth-child(odd){
+  background-color: rgb(36, 65, 36);  
+}
+
+.completed-task li div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.completed-task li button:nth-child(2) {
+  background-color: rgb(85, 85, 37);
+}
